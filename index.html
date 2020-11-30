@@ -10,6 +10,8 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
 
     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
 
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -22,16 +24,72 @@
 
     <div id="app">
         <header>
+            <div class="contact container">
+                <div class="left">
+                    <i class="fas fa-clock"></i>
+                    Open Hours: {{ OpenHours.openDay }} - {{ OpenHours.closeDay }} - {{ OpenHours.openHour }} - {{ OpenHours.closeHour }}
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-phone-alt"></i>
+                                {{ phoneNumber }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-envelope"></i>
+                                {{ mail }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
 
         </header>
 
         <div class="intro">
+            <div class="filter">
+                <div class="container">
+                    <!-- navbar -->
+                    <nav>
+                        <div class="left">
+                            <div class="logo">
+                                <div class="nex">NEX</div>
+                                <div class="gen">GEN</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul></ul>
+                                <li v-for="element in menu">
+                                    {{ element.name }}
+                                </li>
+                                <li>
+                                    <button class="btn btn-primary">
+                                        get in touch
+                                    </button>
 
-            <!-- navbar -->
-            <nav></nav>
-
-            <!-- lead costumer -->
-            <div class="intro-main">
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+        
+                    <!-- lead costumer -->
+                    <div class="intro-main">
+        
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -5,5 +5,101 @@
 }
 
 body{
-    background-color: silver;
+    font-family: 'Roboto', sans-serif;
+    color: #c0c3d0;
+
 }
+
+/* general */
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+li{
+    list-style: none ;
+}
+
+a{
+    color: #c0c3d0;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.logo{
+    font-weight: 500;
+}
+
+/* logo */
+.logo .nex,
+.logo .gen{
+    display: inline-block;
+}
+
+
+/* button */
+.btn{
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    border: none;
+    color: rgba(255,255,255, .9);
+    background-color: #0d7e7e;
+}
+
+/* header */
+header{
+    background-color: #24333d;
+    color: #c0c3d0;
+    padding: 15px 0;
+}
+header .contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+header li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header a:hover{
+    color: #fff;
+}
+
+/* intro */
+.intro{
+    background-image: url(../img/hero-image.png);
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    color: #c0c3d0;
+    
+}
+
+.intro .filter{
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.intro nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.intro .right{
+    display: flex;
+    align-items: center;
+}
+
+.intro .right li{
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
