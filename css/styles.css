@@ -23,9 +23,23 @@ h1{
     font-size: 60px;
 }
 
+h2{
+    color: #24333d;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 25px 0;
+
+}
+
 h3{
     margin: 20px 0;
     color: #24333d;
+}
+
+h4{
+    font-weight: 500;
+    color: #038483;
+    text-transform: uppercase;
 }
 
 li{
@@ -209,5 +223,80 @@ header a:hover{
     position: relative;
     bottom: 3px;
 }
+
+/* about */
+.about{
+    /* height: 600px; */
+}
+
+
+.about .left{
+    position: relative;
+    /* float: left; */
+    padding: 80px 10px 80px 0;
+    width: 550px;
+    /* height: 100%; */
+    /* background-color: tomato; */
+}
+
+.about h2 span{
+    padding: 5px 10px;
+    background-color: rgba(13, 126, 126, .2);
+    color: #0d7e7e;
+    border-radius: 2px;
+
+}
+
+.about .left > p{
+    margin-bottom: 30px;
+}
+
+.about .boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .box{
+    flex-basis: 50%;
+    padding: 10px 0;
+}
+
+.about .grid{
+    position: absolute;
+    width: 120px;
+    z-index: 1;
+}
+
+.about .grid.bottom{
+    bottom: -35px;
+    right: -60px;
+}
+
+.about .grid.top{
+    top: -40px;
+    right: -60px;
+
+}
+
+
+.about .grid i{
+    color:  rgba(13, 126, 126, .2);
+    font-size: 7px;
+    padding: 0 3px;
+}
+
+
+
+.about .image{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 50vW;
+    height: 100%;
+    background-image: url(../img/about-3.jpg);
+    background-position: left center;
+    background-size: cover;
+}
+
 
 
