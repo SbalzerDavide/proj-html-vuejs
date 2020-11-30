@@ -42,6 +42,13 @@ h4{
     text-transform: uppercase;
 }
 
+.highlight{
+    padding: 5px 10px;
+    background-color: rgba(13, 126, 126, .2);
+    /* color: #0d7e7e; */
+    border-radius: 2px;
+}
+
 li{
     list-style: none ;
 }
@@ -63,7 +70,6 @@ a{
 }
 
 .logo .nex{
-    padding: ;
     color: #39c4c6;
     background-color: rgba(57, 196, 198, .2);
     padding: 8px 3px 8px 15px;
@@ -72,6 +78,13 @@ a{
 }
 
 /* color */
+.white{
+    color: #fff;
+}
+
+.green{
+    color: #038483;
+}
 
 
 
@@ -88,6 +101,11 @@ a{
     border: 1px solid #0d7e7e;
     color: rgba(255,255,255, .9);
     background-color: #0d7e7e;
+    transition: opacity .3s;    
+}
+
+.btn-primary:hover{
+    opacity: .9;
 }
 
 .btn-secondary{
@@ -102,7 +120,7 @@ a{
 
 }
 
-/* header */
+/********************************** header **********************************/
 header{
     background-color: #24333d;
     color: #c0c3d0;
@@ -122,7 +140,7 @@ header a:hover{
     color: #fff;
 }
 
-/* intro */
+/********************************** intro **********************************/
 .hero{
     background-image: url(../img/hero-image.png);
     background-position: center;
@@ -224,27 +242,15 @@ header a:hover{
     bottom: 3px;
 }
 
-/* about */
-.about{
-    /* height: 600px; */
-}
-
-
+/********************************* about **********************************/
 .about .left{
     position: relative;
-    /* float: left; */
     padding: 80px 10px 80px 0;
     width: 550px;
-    /* height: 100%; */
-    /* background-color: tomato; */
 }
 
-.about h2 span{
-    padding: 5px 10px;
-    background-color: rgba(13, 126, 126, .2);
+.about .highlight{
     color: #0d7e7e;
-    border-radius: 2px;
-
 }
 
 .about .left > p{
@@ -261,6 +267,7 @@ header a:hover{
     padding: 10px 0;
 }
 
+/* grid */
 .about .grid{
     position: absolute;
     width: 120px;
@@ -275,9 +282,7 @@ header a:hover{
 .about .grid.top{
     top: -40px;
     right: -60px;
-
 }
-
 
 .about .grid i{
     color:  rgba(13, 126, 126, .2);
@@ -285,8 +290,7 @@ header a:hover{
     padding: 0 3px;
 }
 
-
-
+/* image right */
 .about .image{
     position: absolute;
     top: 0;
@@ -298,5 +302,46 @@ header a:hover{
     background-size: cover;
 }
 
+/******************************* business ******************************/
+.business{
+    padding: 80px 0;
+    background-color: #121117;
+    color: rgba(255,255,255, .8);
+}
 
+.business h2{
+    color: #fff;
+}
+
+.business .text-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.business .text-btn p{
+    width: 70%;
+}
+
+.business .boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.business .boxes .box{
+    flex-basis: 32%;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #1e2223;
+}
+
+.business .box i{
+    font-size: 30px;
+}
+
+.business .box > *:not(i){
+    margin-bottom: 20px;
+}
 
