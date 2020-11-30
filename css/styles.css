@@ -7,7 +7,8 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: #1e2223;
+    font-weight: 300;
+    color: #706c68;
 }
 
 /* general */
@@ -23,6 +24,7 @@ h1{
 }
 
 h3{
+    margin: 20px 0;
     color: #24333d;
 }
 
@@ -152,6 +154,7 @@ header a:hover{
     flex-grow: 1;
     width: 600px;
     color: #c0c3d0;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -165,7 +168,7 @@ header a:hover{
 
 /* advantage */
 .advantages{
-    background-color: #eef4ed;
+    background-color: #e3e7df;
     padding: 50px 0;
 }
 
@@ -175,10 +178,36 @@ header a:hover{
 }
 
 .advantages .box{
-    padding: 20px;
-    width: 30%;
+    padding: 35px;
+    width: 32%;
     border-radius: 5px;
     background-color: #fff;
 
 }
+
+.advantages .box .cover-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: rgba(13, 126, 126, .2);
+    color: #0d7e7e;
+}
+
+/* perfect position of icon */
+.advantages .box .fa-chart-pie{
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+}
+
+.advantages .box .fa-tachometer-alt{
+    position: relative;
+    bottom: 3px;
+}
+
 
