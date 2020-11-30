@@ -59,6 +59,12 @@ a{
     transition: color .3s;
 }
 
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .logo{
     font-weight: 500;
 }
@@ -204,17 +210,23 @@ header a:hover{
     padding: 50px 0;
 }
 
-.all-advantage{
+/* .all-advantage{
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .advantages .box{
+    position: relative;
+    bottom: 0;
     padding: 35px;
     width: 32%;
     border-radius: 5px;
     background-color: #fff;
+    transition: bottom .3s;
+}
 
+.advantages .box:hover{
+    bottom: 20px;
 }
 
 .advantages .box .cover-icon{
@@ -257,14 +269,16 @@ header a:hover{
     margin-bottom: 30px;
 }
 
-.about .boxes{
+/* .about .boxes{
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .about .box{
+    bottom: 0;
     flex-basis: 50%;
     padding: 10px 0;
+    transition: bottom .3s;
 }
 
 /* grid */
@@ -323,18 +337,25 @@ header a:hover{
     width: 70%;
 }
 
-.business .boxes{
+/* .business .boxes{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+} */
 
 .business .boxes .box{
+    position: relative;
+    bottom: 0;
     flex-basis: 32%;
     padding: 30px;
     margin: 20px 0;
     border-radius: 5px;
     background-color: #1e2223;
+    transition: bottom .3s;
+}
+
+.business .boxes .box:hover{
+    bottom: 20px;
 }
 
 .business .box i{
@@ -343,5 +364,66 @@ header a:hover{
 
 .business .box > *:not(i){
     margin-bottom: 20px;
+}
+
+/******************************* pricing ******************************/
+.pricing{
+    background-color: #e3e7df;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing p{
+    width: 75%;
+    margin: 0 auto 30px;
+}
+
+.pricing .box{
+    position: relative;
+    flex-basis: 32%;
+    background-color: #fff;
+    padding: 40px 25px;
+    border-radius: 10px;
+    transition: transform .3s;
+}
+
+.pricing .box:hover{
+    transform: scale(1.07);
+}
+
+.pricing .box > i{
+    font-size: 30px;
+}
+
+.pricing .box .number{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.pricing .price{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+}
+
+.pricing li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.pricing .popular{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 8px;
+    width: 65px;
+    text-align: left;
+    font-size: 12px;
+    color: #fff;
+    background-color: #038483;
+    border-radius: 0 20px 20px 0;
 }
 

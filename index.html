@@ -104,7 +104,7 @@
 
         <!-- three box of advantages -->
         <div class="advantages">
-            <div class="all-advantage container">
+            <div class="boxes container">
                 <div class="box">
                     <div class="cover-icon">
                         <i class="fas fa-user-friends"></i>
@@ -240,6 +240,45 @@
 
         <!-- pricing table -->
         <div class="pricing">
+            <div class="container">
+                <h4>Monthly plan</h4>
+                <h2>
+                    <span class="highlight">Pricing</span>
+                    Table
+                </h2>
+                <p>We can help you deliver and execute your future, wherever you compete, using the latest technologies, from strategy development to implementation</p>
+                <div class="boxes">
+                    <div v-for="plan in plans" class="box">
+                        <i :class="`green ${plan.icon}`"></i>
+                        <h2>{{ plan.name }}</h2>
+                        <div class="price green">
+                            $ 
+                            <div class="number">
+                                {{ plan.cost }}
+                            </div>
+                            <small>
+                                 /mouth
+                            </small>
+                        </div>
+                        <ul>
+                            <li v-for="feature in plan.features">
+                                <div class="name">
+                                    {{ feature.name }}
+                                </div>
+                                <div class="status">
+                                    <i v-if="feature.status" class="green fas fa-check"></i>
+                                    <i v-else class="green fas fa-times"></i>
+                                </div>
+                            </li>
+                        </ul>
+                        <div v-if="plan.popular" class="popular">
+                            Most Popular
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
 
         </div>
 
