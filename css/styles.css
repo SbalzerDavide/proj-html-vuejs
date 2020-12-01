@@ -145,8 +145,20 @@ a{
 
 .btn-secondary:hover{
     background-color: #0d7e7e;
-
 }
+
+.btn-third{
+    border: 1px solid #0d7e7e;
+    color: #038483;
+    background-color: transparent;
+    transition: all .3s;
+}
+
+.btn-third:hover{
+    color: #fff;
+    background-color: #038483;
+}
+
 .cover-icon{
     display: flex;
     align-items: center;
@@ -235,10 +247,70 @@ header a:hover{
 }
 
 .hero nav .right li{
+    position: relative;
     text-transform: uppercase;
     margin-left: 30px;
+    cursor: pointer;
+    transition: all .3s;
 }
 
+.hero nav .right li:hover{
+    color: #fff;
+}
+
+.hero nav .right li i{
+    margin-left: 4px;
+}
+
+/* submenu */
+nav .sub{
+    position: absolute;
+    top: 170%;
+    border-radius: 3px;
+    color: #1e2223;
+    background-color: #fff;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .8);
+}
+
+nav .right .sub::after{
+    /* content: '';
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    background-color: #fff;
+    height: 12px;
+    width: 12px;
+    transform: rotate(45deg); */
+
+
+
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    transform: translate( -50%, -50% ) rotate(0);
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    font-size: 30px;
+    content: "\f0d8";
+    color: #fff;
+    opacity: 1;
+    transition: transform .3s,
+                opacity .3s;
+
+}
+
+nav .right .sub li{
+    padding: 10px 20px;
+    margin-left: 0;
+}
+
+nav .right .sub li:hover{
+    color: #1e2223;
+    /* background-color: rgba(0, 0, 0, .3); */
+    background-color: rgba(13, 126, 126, .7);
+}
+
+/* intro */
 .hero .intro{
     align-self: center;
     display: flex;
@@ -625,10 +697,12 @@ header a:hover{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .3s;
 }
 
-.contacts .right button{
-    color: #038483;
+.contacts .right li:hover{
+    color: #01afaf;
 }
 
 /********************************** map ********************************/

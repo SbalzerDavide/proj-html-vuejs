@@ -17,11 +17,27 @@ const app = new Vue ({
             },
             {
                 name: 'about',
-                sub: [],
+                sub: [
+                    'The Company',
+                    'Institutional',
+                    'Social & Events',
+                    'Innovation',
+                    'Environment',
+                    'Technlogy'
+                ],
+                open: false,
             },
             {
                 name: 'services',
-                sub: [],
+                sub: [
+                    'Audit & Assurance',
+                    'Financial Advisory',
+                    'Analytics M&A',
+                    'Middle Marketing',
+                    'Legal Consulting',
+                    'Regulatory Risk'
+                ],
+                open: false,
             },
             {
                 name: 'pricing',
@@ -164,7 +180,21 @@ const app = new Vue ({
                 ],
             },
         ],
-        
-
     },
+    methods:{
+        toggleMenu(index){
+            console.log(index);
+            if (this.menu[index].open != null){
+                this.menu[index].open = !this.menu[index].open;
+                console.log(this.menu[index].open);
+                if(this.menu[index].open === true){
+                    for (i = 0; i < this.menu.length; i++){
+                        if (i != index){
+                            this.menu[i].open = false; 
+                        };
+                    };
+                };
+            }
+        }
+    }
 });

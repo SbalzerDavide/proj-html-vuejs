@@ -74,14 +74,22 @@
                     </div>
                     <div class="right">
                         <ul></ul>
-                            <li v-for="element in menu">
+                            <li @click="toggleMenu(index)" 
+                            v-for="(element, index) in menu"
+                            :class="element.open ? 'white' : ''"
+                            >
                                 {{ element.name }}
+                                <i v-if="element.sub.length > 0" class="fas fa-chevron-down"></i>
+                                <ul v-if="element.sub.length > 0 && element.open" class="sub">
+                                    <li v-for="subMenu in element.sub">
+                                        {{ subMenu }}
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <button class="btn btn-primary">
                                     get in touch
                                 </button>
-
                             </li>
                         </ul>
                     </div>
@@ -419,7 +427,7 @@
                             {{ address }}
                         </li>
                     </ul>
-                    <button class="btn btn-secondary">view map</button>
+                    <button class="btn btn-third">view map</button>
 
                 </div>
             </div>
