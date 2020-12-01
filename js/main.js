@@ -3,6 +3,7 @@ const app = new Vue ({
     data: {
         phoneNumber: '+1 (305) 1234-5678',
         mail: 'hello@example.com',
+        address: 'Main Avenue, 987',
         OpenHours: {
             openDay: 'Mon',
             closeDay: 'Sat',
@@ -117,6 +118,17 @@ const app = new Vue ({
                 ]
             },
 
-        ]
+        ],
+        newsletter: {
+            name: '',
+            email: '',
+        },
+        message: {
+            name: '',
+            email: '',
+            phone: '',
+            text:'',
+        },
+
     },
 });

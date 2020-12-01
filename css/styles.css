@@ -147,16 +147,41 @@ a{
     background-color: #0d7e7e;
 
 }
+.cover-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: rgba(13, 126, 126, .2);
+    color: #0d7e7e;
+}
 
-input{
+input,
+select,
+textarea{
+    font-family: 'Roboto', sans-serif;
     padding: 10px;
     border-radius: 3px;
     border: none;
     background-color: rgba(255, 255, 255, .6);
 }
 
-input:focus{
+input:focus,
+select:focus,
+textarea:focus{
     outline: none;
+}
+
+select{
+    appearance: none;
+}
+
+::placeholder{
+    font-family: 'Roboto', sans-serif;
 }
 
 /********************************** header **********************************/
@@ -258,19 +283,6 @@ header a:hover{
 
 .advantages .box:hover{
     bottom: 20px;
-}
-
-.advantages .box .cover-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    font-size: 30px;
-    background-color: rgba(13, 126, 126, .2);
-    color: #0d7e7e;
 }
 
 /* perfect position of icon */
@@ -536,13 +548,93 @@ header a:hover{
 .newsletter .left,
 .newsletter .right{
     flex-basis: 50%;
-    padding: 30px;
+    padding: 0 80px;
+}
+
+.newsletter p{
+    width: 100%;
 }
 
 .newsletter input{
     margin-bottom: 20px;
     width: 100%;
 }
+
+/******************************* contacts ******************************/
+.contacts{
+    padding: 80px 0;
+}
+.contacts .left{
+    padding: 10px;
+    flex-basis: 60%;
+}
+
+.contacts .form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacts .form .input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.contacts .form .input input,
+.contacts .form .input select{
+    flex-grow: 1;
+    padding: 10px 0;
+    background-color: transparent;
+
+}
+
+.contacts .form > input,
+.contacts .form .input{
+    width: 48%;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.contacts .form textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.contacts .right{
+    flex-basis: 40%;
+    padding: 0 30px;
+}
+
+.contacts .right p{
+    margin-bottom: 20px;
+}
+
+.contacts .right .cover-icon{
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+
+}
+
+.contacts .right li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contacts .right button{
+    color: #038483;
+}
+
+
+
+
 
 
 

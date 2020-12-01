@@ -358,18 +358,71 @@
                     <div class="text-btn">
                         <p class="white-rgba">Follow closely and receive content about our company and the news of the currentmarket.</p>
                     </div>
-    
                 </div>
                 <div class="right">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
+                    <input v-model="newsletter.name" type="text" placeholder="Name">
+                    <input v-model="newsletter.email" type="email" placeholder="Email">
                     <button class="btn btn-primary">subscribe</button>
                 </div>
             </div>
         </div>
 
         <!-- contacts and send message -->
-        <div class="contacts">
+        <div class="contacts container">
+            <div class="boxes">
+                <div class="left">
+                    <h4>send a message</h4>
+                    <h2>
+                        Get in 
+                        <span class="highlight green">Touch</span>
+                    </h2>
+                    <div class="text-btn">
+                        <p>We will respond to your message as soon as possible.</p>
+                    </div>
+                    <div class="form">
+                        <div class="input">
+                            <input v-model="message.name" type="text" placeholder="Name">
+                            <img src="./img/image (1).png" alt="">
+                        </div>
+                        <input v-model="message.email" type="email" placeholder="Email">
+                        <input v-model="message.phone" type="text" placeholder="Phone">
+                        <div class="input"> More Info
+                            <select name="" id=""></select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <textarea v-model="message.text" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button class="btn btn-primary">send</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>Example Inc.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Architecto voluptatibus iure eos amet rem? Cupiditate at odio quaerat?</p>
+                    <ul class="green">
+                        <li>
+                            <div class="cover-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>{{ phoneNumber }}</div>
+                            
+                        </li>
+                        <li>
+                            <div class="cover-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            {{ mail }}
+                        </li>
+                        <li>
+                            <div class="cover-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            {{ address }}
+                        </li>
+                    </ul>
+                    <button class="btn btn-secondary">view map</button>
+
+                </div>
+            </div>
 
         </div>
 
