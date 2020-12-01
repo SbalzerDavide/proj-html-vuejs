@@ -83,6 +83,18 @@ a{
 
 }
 
+/* text with right btn */
+.text-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.text-btn p{
+    width: 70%;
+}
+
+
 /* color */
 .white{
     color: #fff;
@@ -92,7 +104,17 @@ a{
     color: #038483;
 }
 
+.white-rgba{
+    color: rgba(255,255,255, .8);
+}
 
+/* filter- remember position relative for father and brother(whith z-index=1)*/
+.filter{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
 
 /* button */
 .btn{
@@ -148,6 +170,7 @@ header a:hover{
 
 /********************************** intro **********************************/
 .hero{
+    position: relative;
     background-image: url(../img/hero-image.png);
     background-position: center;
     background-size: cover;
@@ -155,14 +178,11 @@ header a:hover{
 }
 
 .all-hero{
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-.hero .filter{
-    height: 100%;
-    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
 }
 
 .hero nav{
@@ -320,22 +340,12 @@ header a:hover{
 .business{
     padding: 80px 0;
     background-color: #121117;
-    color: rgba(255,255,255, .8);
 }
 
 .business h2{
     color: #fff;
 }
 
-.business .text-btn{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.business .text-btn p{
-    width: 70%;
-}
 
 /* .business .boxes{
     display: flex;
@@ -426,4 +436,83 @@ header a:hover{
     background-color: #038483;
     border-radius: 0 20px 20px 0;
 }
+
+/******************************* news ******************************/
+.news{
+    padding: 80px 0;
+}
+
+.news .boxes{
+    margin-top: 50px;
+}
+
+
+
+.news .boxes .box{
+    position: relative;
+    height: 350px;
+    flex-basis: 32%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.news .box h3,
+.news .box p,
+.news .box .top{
+    text-align: center;
+    position: absolute;
+    padding: 30px;
+}
+
+.news .box h3{
+    bottom: 5px;
+    transition: all .3s;
+}
+
+.news .box p{
+    opacity: 0;
+    bottom: -70px;
+    transition: all .3s;
+}
+
+.news .box .top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: -70px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.news .box:hover h3{
+    bottom: 50px;
+}
+
+.news .box:hover p{
+    opacity: 1;
+    bottom: 5px;
+}
+
+.news .box:hover .top{
+    opacity: 1;
+    top: 5px;
+}
+
+
+
+
+.news .box:nth-child(1) {
+    background-image: url(../img/news-1.jpg);
+}
+
+.news .box:nth-child(2) {
+    background-image: url(../img/news-2.jpg);
+}
+
+.news .box:nth-child(3) {
+    background-image: url(../img/news-3.jpg);
+}
+
+
 
