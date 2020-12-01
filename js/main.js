@@ -129,6 +129,42 @@ const app = new Vue ({
             phone: '',
             text:'',
         },
+        siteMap:[
+            {
+                category: 'About',
+                sub: [
+                    'The Company',
+                    'Institutional',
+                    'Social & Events',
+                    'Innovation',
+                    'Environment',
+                    'Technlogy'
+                ],
+            },
+            {
+                category: 'Services',
+                sub: [
+                    'Audit & Assurance',
+                    'Financial Advisory',
+                    'Analytics M&A',
+                    'Middle Marketing',
+                    'Legal Consulting',
+                    'Regulatory Risk'
+                ],
+            },
+            {
+                category: 'Support',
+                sub: [
+                    'Responsability',
+                    'Terms of Use',
+                    'About Cookies',
+                    'Privacy Policy',
+                    'Accessibility',
+                    'Information'
+                ],
+            },
+        ],
+        
 
     },
 });

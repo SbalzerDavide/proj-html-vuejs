@@ -619,7 +619,6 @@ header a:hover{
     width: 40px;
     border-radius: 50%;
     font-size: 20px;
-
 }
 
 .contacts .right li{
@@ -630,6 +629,58 @@ header a:hover{
 
 .contacts .right button{
     color: #038483;
+}
+
+/********************************** map ********************************/
+.map{
+    padding: 80px 0;
+    background-color: #121117;
+}
+
+.map i{
+    margin-right: 8px;
+}
+.map .logo,
+.map p,
+.map li{
+    margin-bottom: 15px;
+}
+
+.map li{
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.map li:hover{
+    color: #fff;
+}
+
+.map .left.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    background-color: transparent;
+
+}
+
+.map .box{
+    flex-basis: 24%;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background-color: #1e2223;
+}
+
+/********************************** footer ********************************/
+footer{
+    padding: 20px 0;
+    background-color: #000;
+}
+
+footer .footer{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 

@@ -426,10 +426,67 @@
 
         </div>
 
+        <div class="map">
+            <div class="container">
+                <div class="boxes">
+                    <div class="box left">
+                        <div class="logo">
+                            <div class="nex">N E X</div>
+                            <div class="gen">G E N</div>
+                        </div>
+                        <p class="white-rgba">A Functionl HTML Template for Corporate and Business.</p>
+                        <ul class="white-rgba">
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                {{ phoneNumber }}
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                {{ mail }}
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{ address }}
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-secondary">get in touch</button>
+                        </div>
+                    </div>
+                    <div v-for="category in siteMap" class="box">
+                        <h2 class="white">{{ category.category }}</h2>
+                        <ul class="white-rgba">
+                            <li v-for="element in category.sub">
+                                <i class="fas fa-chevron-right"></i>
+                                {{ element }}
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="bottom">
+
+                </div>
+            </div>
+            
+        </div>
+
         <!-- footer -->
         <footer>
-            
+            <div class="footer container">
+                <div class="left">
+                    <small class="white-rgba">
+                        Enjoy the low price. We are tracking any interation of piracy.
+                    </small>
+                </div>
+                <div class="right">
+                    <small class="white-rgba">
+                        &copy; 2020 NEXGEN is Proudly Powered by <span class="green">Codings</span>.
+                    </small>
+                </div>
+            </div>
         </footer>
+
 
     </div>
 
