@@ -183,10 +183,8 @@ const app = new Vue ({
     },
     methods:{
         toggleMenu(index){
-            console.log(index);
             if (this.menu[index].open != null){
                 this.menu[index].open = !this.menu[index].open;
-                console.log(this.menu[index].open);
                 if(this.menu[index].open === true){
                     for (i = 0; i < this.menu.length; i++){
                         if (i != index){

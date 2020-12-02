@@ -28,7 +28,6 @@ h2{
     font-weight: 700;
     font-size: 30px;
     margin: 25px 0;
-
 }
 
 h3{
@@ -45,7 +44,6 @@ h4{
 .highlight{
     padding: 5px 10px;
     background-color: rgba(13, 126, 126, .2);
-    /* color: #0d7e7e; */
     border-radius: 2px;
 }
 
@@ -273,17 +271,6 @@ nav .sub{
 }
 
 nav .right .sub::after{
-    /* content: '';
-    position: absolute;
-    top: -6px;
-    left: 20px;
-    background-color: #fff;
-    height: 12px;
-    width: 12px;
-    transform: rotate(45deg); */
-
-
-
     position: absolute;
     top: -5px;
     left: 20px;
@@ -296,7 +283,6 @@ nav .right .sub::after{
     opacity: 1;
     transition: transform .3s,
                 opacity .3s;
-
 }
 
 nav .right .sub li{
@@ -338,16 +324,11 @@ nav .right .sub li:hover{
     padding: 50px 0;
 }
 
-/* .all-advantage{
-    display: flex;
-    justify-content: space-between;
-} */
-
 .advantages .box{
+    flex-basis: 32%;
     position: relative;
     bottom: 0;
     padding: 35px;
-    width: 32%;
     border-radius: 5px;
     background-color: #fff;
     transition: bottom .3s;
@@ -383,11 +364,6 @@ nav .right .sub li:hover{
 .about .left > p{
     margin-bottom: 30px;
 }
-
-/* .about .boxes{
-    display: flex;
-    flex-wrap: wrap;
-} */
 
 .about .box{
     bottom: 0;
@@ -440,13 +416,6 @@ nav .right .sub li:hover{
 .business h2{
     color: #fff;
 }
-
-
-/* .business .boxes{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-} */
 
 .business .boxes .box{
     position: relative;
@@ -541,8 +510,6 @@ nav .right .sub li:hover{
     margin-top: 50px;
 }
 
-
-
 .news .boxes .box{
     position: relative;
     height: 350px;
@@ -593,8 +560,6 @@ nav .right .sub li:hover{
     opacity: 1;
     top: 5px;
 }
-
-
 
 /* background image */
 .news .box:nth-child(1) {
@@ -735,7 +700,6 @@ nav .right .sub li:hover{
     justify-content: space-between;
     padding: 0;
     background-color: transparent;
-
 }
 
 .map .box{
@@ -754,7 +718,6 @@ footer{
 footer .footer{
     display: flex;
     justify-content: space-between;
-
 }
 
 
