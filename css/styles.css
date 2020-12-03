@@ -508,6 +508,42 @@ nav .right .sub li:hover{
 
 .news .boxes{
     margin-top: 50px;
+    position: relative;
+}
+
+.news .arrow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news .left-arrow{
+    position: relative;
+    left: -50px;
+    top: 240px;
+    font-size: 30px;
+    color: #038483;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.news .right-arrow{
+    position: relative;
+    right: -50px;
+    top: 240px;
+    font-size: 30px;
+    color: #038483;
+    cursor: pointer;
+    transition: all .3s;
+
+}
+
+.news .left-arrow:hover,
+.news .right-arrow:hover{
+    transform: scale(1.2);
+}
+
+.news .boxes{
+    overflow: hidden;
 }
 
 .news .boxes .box{
@@ -516,8 +552,34 @@ nav .right .sub li:hover{
     flex-basis: 32%;
     border-radius: 10px;
     overflow: hidden;
-    background-size: cover;
+    background-size: cover !important;
 }
+
+.news .boxes .box.before{
+    position: absolute;
+    left: -373px;
+    width: 32%;
+    height: 350px;
+    /* opacity: 0; */
+}
+
+.news .boxes .box.after{
+    position: absolute;
+    left: 102%;
+    width: 32%;
+    height: 350px;
+}
+
+.pos-right{
+    transform: translateX(373px);
+    transition: all 1s;
+}
+
+.pos-left{
+    transform: translateX(-373px);
+    transition: all 1s;
+}
+
 
 .news .box h3,
 .news .box p,
@@ -562,17 +624,17 @@ nav .right .sub li:hover{
 }
 
 /* background image */
-.news .box:nth-child(1) {
+/* .news .box:nth-child(2) {
     background-image: url(../img/news-1.jpg);
-}
+} */
 
-.news .box:nth-child(2) {
+/* .news .box:nth-child(3) {
     background-image: url(../img/news-2.jpg);
 }
 
-.news .box:nth-child(3) {
+.news .box:nth-child(4) {
     background-image: url(../img/news-3.jpg);
-}
+} */
 
 /******************************* newsletter ******************************/
 .newsletter{

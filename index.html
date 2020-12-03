@@ -301,53 +301,139 @@
                     <p>Every week we publish content about what is best in te business world.</p>
                     <button class="btn btn-primary">see all</button>
                 </div>
-                <div class="boxes">
-                    <div class="box">
+                <div class="arrow">
+                    <div class="left-arrow" @click="goLeft">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+    
+                    <div class="right-arrow" @click="goRight">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="boxes"
+                >
+                    <div 
+                    class="box before" 
+                    :class="move ? pos : ''" 
+                    :style="`background: url(./img/${news[beforeIndex].path});`"
+                    >
                         <div class="filter"></div>
-                        <h3 class="white">Increasing creativity is possible for everyone</h3>
+                        <h3 class="white">
+                            {{news[beforeIndex].title}}
+                        </h3>
                         <div class="top white-rgba">
                             <div class="name">
                                 <i class="far fa-user"></i>
-                                Andrea Miller
+                                {{ news[beforeIndex].author }}
                             </div>
                             <div class="access">
                                 <i class="far fa-clock"></i>
-                                2 Days Ago
+                                {{ news[beforeIndex].access }}
                             </div>
                         </div>
-                        <p class="white-rgba">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p class="white-rgba">{{ news[beforeIndex].text }}</p>
                     </div>
-                    <div class="box">
+
+
+
+
+                    <div 
+                    class="box"
+                    :class="move ? pos : ''" 
+                    :style="`background: url(./img/${news[firstIndex].path});`"
+                    >
+                        <div class="filter"></div>
+                        <h3 class="white">
+                            {{news[firstIndex].title}}
+                        </h3>
+                        <div class="top white-rgba">
+                            <div class="name">
+                                <i class="far fa-user"></i>
+                                {{ news[firstIndex].author }}
+                            </div>
+                            <div class="access">
+                                <i class="far fa-clock"></i>
+                                {{ news[firstIndex].access }}
+                            </div>
+                        </div>
+                        <p class="white-rgba">{{ news[firstIndex].text }}</p>
+                    </div>
+
+
+
+
+
+
+                    <div 
+                    class="box"
+                    :class="move ? pos : ''"
+                    :style="`background: url(./img/${news[secondIndex].path});`"
+                    >
                         <div class="filter">
-                            <h3 class="white">Because market research is part of the business plan</h3>
+                            <h3 class="white">
+                                {{news[secondIndex].title}}
+                            </h3>
                             <div class="top white-rgba">
                                 <div class="name">
                                     <i class="far fa-user"></i>
-                                    Andrea Miller
+                                    {{news[secondIndex].author}}
                                 </div>
                                 <div class="access">
                                     <i class="far fa-clock"></i>
-                                    2 Days Ago
+                                    {{news[secondIndex].access}}
                                 </div>
                                 </div>
-                            <p class="white-rgba">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <p class="white-rgba">{{ news[secondIndex].text }}</p>
                         </div>
                     </div>
-                    <div class="box">
+                    <div 
+                    class="box"
+                    :class="move ? pos : ''"
+                    :style="`background: url(./img/${news[thirdIndex].path}); 
+                    `"
+                    >
+                        <div class="filter">
+                            <h3 class="white">
+                                {{news[thirdIndex].title}}
+                            </h3>
+                            <div class="top white-rgba">
+                                <div class="name">
+                                    <i class="far fa-user"></i>
+                                    {{news[thirdIndex].author}}
+                                </div>
+                                <div class="access">
+                                    <i class="far fa-clock"></i>
+                                    {{news[thirdIndex].access}}
+                                </div>
+                                </div>
+                            <p class="white-rgba">{{ news[thirdIndex].text }}</p>
+                        </div>
+                    </div>
+
+                    <div 
+                    class="box after" 
+                    :class="move ? pos : ''" 
+                    :style="`background: url(./img/${news[afterIndex].path});`"
+                    >
                         <div class="filter"></div>
-                        <h3 class="white">Working from home is now a trend</h3>
+                        <h3 class="white">
+                            {{news[afterIndex].title}}
+                        </h3>
                         <div class="top white-rgba">
                             <div class="name">
                                 <i class="far fa-user"></i>
-                                Andrea Miller
+                                {{ news[afterIndex].author }}
                             </div>
                             <div class="access">
                                 <i class="far fa-clock"></i>
-                                2 Days Ago
+                                {{ news[afterIndex].access }}
                             </div>
                         </div>
-                        <p class="white-rgba">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p class="white-rgba">{{ news[afterIndex].text }}</p>
                     </div>
+
+
 
                 </div>
             </div>

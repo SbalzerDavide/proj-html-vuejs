@@ -180,6 +180,64 @@ const app = new Vue ({
                 ],
             },
         ],
+
+
+
+        //index for sider
+        beforeIndex: '',
+        firstIndex: 0,
+        secondIndex: 1,
+        thirdIndex: 2,
+        afterIndex: 3,
+
+        move: false,
+        pos: '',
+
+
+
+
+
+        news:[
+            {
+                path:'news-1.jpg',
+                title: 'Increasing creativity is possible for everyone',
+                text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                author: 'Andrea Miller',
+                access: 'two Days Ago'
+            },
+            {
+                path:'news-2.jpg',
+                title: 'Because market research is part of the business plan',
+                text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                author: 'Charly Brown',
+                access: '1 Week Ago'
+            },
+            {
+                path:'news-3.jpg',
+                title: 'Working from home is now a trend',
+                text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                author: 'Madeleine Day',
+                access: 'Yesterday'
+            },
+            {
+                path:'news-4.jpg',
+                title: 'Text of 4th news',
+                text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                author: 'Paul Frank',
+                access: 'Today'
+            },
+            {
+                path:'news-5.jpg',
+                title: 'Text of 5th news',
+                text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                author: 'Anne Philips',
+                access: 'three Days Ago'
+            },
+        ],
+    },
+    created(){
+        this.beforeIndex = this.news.length -1;
+        console.log(this.beforeIndex);
     },
     methods:{
         toggleMenu(index){
@@ -193,6 +251,97 @@ const app = new Vue ({
                     };
                 };
             }
-        }
+        },
+        goRight(){
+            this.pos = 'pos-right'
+            this.move = true;
+            console.log('right');
+            setTimeout( ()=> {
+                this.move = false;
+
+                // before index
+                this.beforeIndex --;
+                if (this.beforeIndex < 0){
+                    this.beforeIndex = this.news.length -1; 
+                };
+
+                //first index
+                this.firstIndex --;
+                if (this.firstIndex < 0){
+                    this.firstIndex = this.news.length -1; 
+                };
+                console.log(this.firstIndex);
+                console.log(this.secondIndex);
+
+                //second index
+                this.secondIndex --;
+                if (this.secondIndex < 0){
+                    this.secondIndex = this.news.length -1; 
+                };
+
+                //third index
+                this.thirdIndex --;
+                if (this.thirdIndex < 0){
+                    this.thirdIndex = this.news.length -1; 
+                };
+
+
+
+                //after index
+                this.afterIndex --;
+                if (this.afterIndex < 0){
+                    this.afterIndex = this.news.length -1; 
+                }
+
+
+
+            },1000)
+        },
+        goLeft(){
+            this.pos = 'pos-left'
+            this.move = true;
+            console.log('left');
+            setTimeout( ()=> {
+                this.move = false;
+                
+                //before index
+                this.beforeIndex ++;
+                if (this.beforeIndex == this.news.length){
+                    this.beforeIndex = 0; 
+                };
+
+                //first index
+                this.firstIndex ++;
+                if (this.firstIndex == this.news.length){
+                    this.firstIndex = 0; 
+                };
+                console.log(this.firstIndex);
+                console.log(this.secondIndex);
+                
+                //second index
+                this.secondIndex ++;
+                if (this.secondIndex == this.news.length){
+                    this.secondIndex = 0; 
+                };
+
+                //third index
+                this.thirdIndex ++;
+                if (this.thirdIndex == this.news.length){
+                    this.thirdIndex = 0; 
+                };
+
+
+                //after index
+                this.afterIndex ++;
+                if (this.afterIndex == this.news.length){
+                    this.afterIndex = 0; 
+                }
+
+
+
+
+            },1000)
+        },
+
     }
 });
