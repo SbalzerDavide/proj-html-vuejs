@@ -180,23 +180,15 @@ const app = new Vue ({
                 ],
             },
         ],
-
-
-
         //index for sider
         beforeIndex: '',
         firstIndex: 0,
         secondIndex: 1,
         thirdIndex: 2,
         afterIndex: 3,
-
+        //slider
         move: false,
         pos: '',
-
-
-
-
-
         news:[
             {
                 path:'news-1.jpg',
@@ -250,12 +242,11 @@ const app = new Vue ({
                         };
                     };
                 };
-            }
+            };
         },
         goRight(){
             this.pos = 'pos-right'
             this.move = true;
-            console.log('right');
             setTimeout( ()=> {
                 this.move = false;
 
@@ -270,9 +261,6 @@ const app = new Vue ({
                 if (this.firstIndex < 0){
                     this.firstIndex = this.news.length -1; 
                 };
-                console.log(this.firstIndex);
-                console.log(this.secondIndex);
-
                 //second index
                 this.secondIndex --;
                 if (this.secondIndex < 0){
@@ -285,22 +273,16 @@ const app = new Vue ({
                     this.thirdIndex = this.news.length -1; 
                 };
 
-
-
                 //after index
                 this.afterIndex --;
                 if (this.afterIndex < 0){
                     this.afterIndex = this.news.length -1; 
-                }
-
-
-
+                };
             },1000)
         },
         goLeft(){
             this.pos = 'pos-left'
             this.move = true;
-            console.log('left');
             setTimeout( ()=> {
                 this.move = false;
                 
@@ -315,8 +297,6 @@ const app = new Vue ({
                 if (this.firstIndex == this.news.length){
                     this.firstIndex = 0; 
                 };
-                console.log(this.firstIndex);
-                console.log(this.secondIndex);
                 
                 //second index
                 this.secondIndex ++;
@@ -330,16 +310,11 @@ const app = new Vue ({
                     this.thirdIndex = 0; 
                 };
 
-
                 //after index
                 this.afterIndex ++;
                 if (this.afterIndex == this.news.length){
                     this.afterIndex = 0; 
-                }
-
-
-
-
+                };
             },1000)
         },
 
