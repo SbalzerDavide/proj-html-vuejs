@@ -41,11 +41,6 @@ h4{
     text-transform: uppercase;
 }
 
-.highlight{
-    padding: 5px 10px;
-    background-color: rgba(13, 126, 126, .2);
-    border-radius: 2px;
-}
 
 li{
     list-style: none ;
@@ -55,6 +50,16 @@ a{
     color: #c0c3d0;
     text-decoration: none;
     transition: color .3s;
+}
+
+.padding-section{
+    padding: 80px 0;
+}
+
+.highlight{
+    padding: 5px 10px;
+    background-color: rgba(13, 126, 126, .2);
+    border-radius: 2px;
 }
 
 .boxes{
@@ -292,7 +297,6 @@ nav .right .sub li{
 
 nav .right .sub li:hover{
     color: #1e2223;
-    /* background-color: rgba(0, 0, 0, .3); */
     background-color: rgba(13, 126, 126, .7);
 }
 
@@ -318,10 +322,9 @@ nav .right .sub li:hover{
     margin: 0 10px;
 }
 
-/* advantage */
+/*************************** advantage ***********************/
 .advantages{
     background-color: #e3e7df;
-    padding: 50px 0;
 }
 
 .advantages .box{
@@ -353,7 +356,7 @@ nav .right .sub li:hover{
 /********************************* about **********************************/
 .about .left{
     position: relative;
-    padding: 80px 10px 80px 0;
+    padding-right: 10px;
     width: 550px;
 }
 
@@ -409,7 +412,6 @@ nav .right .sub li:hover{
 
 /******************************* business ******************************/
 .business{
-    padding: 80px 0;
     background-color: #121117;
 }
 
@@ -443,7 +445,6 @@ nav .right .sub li:hover{
 /******************************* pricing ******************************/
 .pricing{
     background-color: #e3e7df;
-    padding: 80px 0;
     text-align: center;
 }
 
@@ -502,10 +503,6 @@ nav .right .sub li:hover{
 }
 
 /******************************* news ******************************/
-.news{
-    padding: 80px 0;
-}
-
 .news .boxes{
     margin-top: 50px;
     position: relative;
@@ -534,7 +531,6 @@ nav .right .sub li:hover{
     color: #038483;
     cursor: pointer;
     transition: all .3s;
-
 }
 
 .news .left-arrow:hover,
@@ -560,7 +556,6 @@ nav .right .sub li:hover{
     left: -373px;
     width: 32%;
     height: 350px;
-    /* opacity: 0; */
 }
 
 .news .boxes .box.after{
@@ -579,7 +574,6 @@ nav .right .sub li:hover{
     transform: translateX(-373px);
     transition: all 1s;
 }
-
 
 .news .box h3,
 .news .box p,
@@ -623,22 +617,8 @@ nav .right .sub li:hover{
     top: 5px;
 }
 
-/* background image */
-/* .news .box:nth-child(2) {
-    background-image: url(../img/news-1.jpg);
-} */
-
-/* .news .box:nth-child(3) {
-    background-image: url(../img/news-2.jpg);
-}
-
-.news .box:nth-child(4) {
-    background-image: url(../img/news-3.jpg);
-} */
-
 /******************************* newsletter ******************************/
 .newsletter{
-    padding: 80px 0;
     background-image: url(../img/bg-1.jpg);
     background-position: center;
     background-size: cover;
@@ -660,9 +640,6 @@ nav .right .sub li:hover{
 }
 
 /******************************* contacts ******************************/
-.contacts{
-    padding: 80px 0;
-}
 .contacts .left{
     padding: 10px;
     flex-basis: 60%;
@@ -734,7 +711,6 @@ nav .right .sub li:hover{
 
 /********************************** map ********************************/
 .map{
-    padding: 80px 0;
     background-color: #121117;
 }
 

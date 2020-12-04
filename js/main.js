@@ -229,7 +229,6 @@ const app = new Vue ({
     },
     created(){
         this.beforeIndex = this.news.length -1;
-        console.log(this.beforeIndex);
     },
     methods:{
         toggleMenu(index){
@@ -244,6 +243,9 @@ const app = new Vue ({
                 };
             };
         },
+        /**
+         * change index of box content when click right arrow 
+         */
         goRight(){
             this.pos = 'pos-right'
             this.move = true;
@@ -280,6 +282,9 @@ const app = new Vue ({
                 };
             },1000)
         },
+        /**
+         * change index of box content when click left arrow 
+         */
         goLeft(){
             this.pos = 'pos-left'
             this.move = true;
